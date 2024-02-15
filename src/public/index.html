@@ -11,7 +11,7 @@
 
 <body>
 
-    <!-- navbar sm -->
+    <!-- navbar -->
     <div
         class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2  bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
         <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
@@ -110,8 +110,41 @@
 
         </div>
     </div>
+    <!-- home -->
+    <section>
+        <div id="typing-text" class="text-lg font-bold">I'm a</div>
+    </section>
 
-    
+    <script>
+        const textElement = document.getElementById('typing-text');
+        let index = 0;
+        let text = '';
+
+        function typeText() {
+            textElement.textContent += text[index];
+            index++;
+
+            if (index === text.length) {
+                clearInterval(typingInterval);
+            }
+        }
+
+        function displayText(newText) {
+            text = newText;
+            index = 0;
+            textElement.textContent = '';
+            typingInterval = setInterval(typeText, 100);
+        }
+
+        // Menggunakan contoh: Ganti teks setiap 3 detik
+        const texts = ['Ilham athallah', 'Developper', 'Software engginer'];
+        let currentIndex = 0;
+        displayText(texts[currentIndex]);
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % texts.length;
+            displayText(texts[currentIndex]);
+        }, 3000);
+    </script>
 </body>
 
 </html>
