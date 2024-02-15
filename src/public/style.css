@@ -705,6 +705,22 @@ video {
   width: 14rem;
 }
 
+.w-\[calc\(500\%-3\.73rem\)\] {
+  width: calc(500% - 3.73rem);
+}
+
+.w-\[calc\(50\%-3\.73rem\)\] {
+  width: calc(50% - 3.73rem);
+}
+
+.w-\[calc\(10\%-3\.73rem\)\] {
+  width: calc(10% - 3.73rem);
+}
+
+.w-\[calc\(3\.73rem\)\] {
+  width: calc(3.73rem);
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -732,6 +748,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -932,6 +952,10 @@ video {
       max-width: 1536px;
     }
   }
+}
+
+.hover\:w-56:hover {
+  width: 14rem;
 }
 
 .hover\:bg-blue-700:hover {
