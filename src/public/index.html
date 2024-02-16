@@ -30,14 +30,17 @@
             <!-- project -->
             <button data-tooltip-target="tooltip-project" type="button"
                 class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z">
-                    </path>
-                </svg>
-                <span class="sr-only">project</span>
+                <a href="#project" class="flex items-center">
+                    <svg class="fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z">
+                        </path>
+                    </svg>
+                    <span class="sr-only">project</span>
+                </a>
             </button>
+
             <div id="tooltip-project" role="tooltip"
                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 project
@@ -115,7 +118,7 @@
     </section>
 
     <!-- project -->
-    <section class="container mx-auto py-20">
+    <section id="project" class="container mx-auto py-20">
         <h2 class="text-3xl font-bold mb-8 text-center">My Project</h2>
         <div class="grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white rounded-lg p-8 shadow-lg">
@@ -143,7 +146,7 @@
     <!-- data home -->
     <script>
         const textElement = document.getElementById('typing-text');
-        const texts = ['Ilham Athallah','Student', 'Software Engginer'];
+        const texts = ['Ilham Athallah', 'Student', 'Software Engginer'];
         let index = 0;
         let charIndex = 0;
 

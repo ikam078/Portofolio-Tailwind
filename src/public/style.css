@@ -643,6 +643,10 @@ video {
   display: inline-block;
 }
 
+.flex {
+  display: flex;
+}
+
 .inline-flex {
   display: inline-flex;
 }
