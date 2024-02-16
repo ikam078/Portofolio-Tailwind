@@ -17,17 +17,17 @@
         <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
 
             <!-- home -->
-                <button data-target="home" type="button"
-                    class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                    <svg class="w-5 h-5 mb-1 fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path
-                            d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-                    </svg>
-                    <span class="sr-only">Home</span>
-                </button>
+            <button data-target="home" type="button"
+                class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+                <svg class="w-5 h-5 mb-1 fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path
+                        d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                </svg>
+                <span class="sr-only">Home</span>
+            </button>
 
-            <!-- przoject -->
+            <!-- project -->
             <button data-tooltip-target="tooltip-project" type="button"
                 class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                 <svg class="fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -144,34 +144,35 @@
     <!-- data home -->
     <script>
         const textElement = document.getElementById('typing-text');
+        const texts = ['Student', 'Software Engginer'];
         let index = 0;
-        let text = '';
+        let charIndex = 0;
 
-        function typeText() {
-            textElement.textContent += text[index];
-            index++;
-
-            if (index === text.length) {
-                clearInterval(typingInterval);
+        function type() {
+            if (charIndex < texts[index].length) {
+                textElement.textContent += texts[index].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 90); // Ubah kecepatan pengetikan disini (dalam milidetik)
+            } else {
+                setTimeout(erase, 900); // Waktu jeda sebelum menghapus teks
             }
         }
 
-        function displayText(newText) {
-            text = newText;
-            index = 0;
-            textElement.textContent = '';
-            typingInterval = setInterval(typeText, 100);
+        function erase() {
+            if (charIndex >= 0) {
+                textElement.textContent = texts[index].substring(0, charIndex);
+                charIndex--;
+                setTimeout(erase, 50); // Kecepatan penghapusan teks
+            } else {
+                index = (index + 1) % texts.length;
+                setTimeout(type, 500); // Waktu jeda sebelum mulai mengetik teks berikutnya
+            }
         }
 
-        // Menggunakan contoh: Ganti teks setiap 3 detik
-        const texts = ['Student', 'Developper', 'Software engginer'];
-        let currentIndex = 0;
-        displayText(texts[currentIndex]);
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % texts.length;
-            displayText(texts[currentIndex]);
-        }, 3000);
+        type(); // Memulai proses pengetikan
     </script>
+
+
 </body>
 
 </html>
