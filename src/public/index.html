@@ -126,13 +126,14 @@
         <!-- Elemen overlay untuk efek loading -->
         <div id="loadingOverlay"
             class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
-            <div class="text-white text-4xl font-semibold mb-4 animate-pulse">Loading<span
-                    class="animate-bounce text-blue-500">...</span></div>
-            <div class="flex space-x-4">
-                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce"></div>
-                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce200"></div>
-                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce400"></div>
-            </div>
+            <svg class="animate-spin h-20 w-20 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4zm8-10c1.634 0 3.142.493 4.406 1.336l2.137-2.137A11.954 11.954 0 0020 12h-4c0-3.309-1.336-6.309-3.496-8.464l-2.138 2.137C13.142 5.493 14.65 5 16 5zM5.294 6.293l2.137-2.137C8.493 3.142 8 4.65 8 6v4H4c0-1.35.493-2.642 1.294-3.707zM12 20c-1.634 0-3.142-.493-4.406-1.336l-2.137 2.137C10.858 22.507 11.934 23 13 23v-4c-1.35 0-2.642-.493-3.707-1.294l2.137-2.137C10.858 15.507 11.934 16 13 16h4c0 1.366-.507 2.658-1.34 3.707l-2.137 2.137C14.142 19.507 13.634 20 12 20zM18.707 17.707l-2.137 2.137A7.962 7.962 0 0016 20h4c0-4.418-3.582-8-8-8v4c1.35 0 2.642.493 3.707 1.294z">
+                </path>
+            </svg>
+            <p class="mt-4 text-lg text-white font-semibold">Loading</p>
         </div>
 
         <div
@@ -143,7 +144,7 @@
                     Deskripsi singkat tentang proyek Anda.
                 </p>
                 <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
-                <a href="halaman-detail.html"
+                <a href=""
                     class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Lihat
                     Detail</a>
             </div>
