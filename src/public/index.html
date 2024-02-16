@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <link rel="stylesheet" href="/src/public/style.css">
+    <link rel="shortcut icon" href="/src/public/image/folder.svg">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
 </head>
 
@@ -122,32 +123,40 @@
     <section id="project" class="container mx-auto py-20">
         <h2 class="text-3xl font-bold mb-8 text-center">Project</h2>
 
-        <div class="p-2">
-            <!-- Elemen overlay untuk efek loading -->
-            <div id="loadingOverlay"
-                class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
-                <div class="text-white text-lg mb-4 animate-pulse">Go to Project</div>
-                <div class="flex space-x-4">
-                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
-                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
-                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
-                </div>
-            </div>
-
-            <div
-                class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
-                <div class="px-6 py-4">
-                    <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Astra Honda Motor</div>
-                    <p class="mb-4 text-gray-700 dark:text-gray-300 text-base">
-                        Created by Bootstrap
-                    </p>
-                    <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
-                    <a href=" https://ikam078.github.io/Honda-x-Bootstrap/"
-                        class="mt-4 px-2 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105"><i
-                            class="lni lni-eye"></i></a>
-                </div>
+        <!-- Elemen overlay untuk efek loading -->
+        <div id="loadingOverlay"
+            class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
+            <div class="text-white text-4xl font-semibold mb-4 animate-pulse">Loading<span
+                    class="animate-bounce text-blue-500">...</span></div>
+            <div class="flex space-x-4">
+                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce"></div>
+                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce200"></div>
+                <div class="w-8 h-8 bg-blue-500 rounded-full animate-bounce400"></div>
             </div>
         </div>
+
+        <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
+            <div class="px-6 py-4">
+                <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Nama Proyek</div>
+                <p class="text-gray-700 dark:text-gray-300 text-base">
+                    Deskripsi singkat tentang proyek Anda.
+                </p>
+                <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
+                <a href="halaman-detail.html"
+                    class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Lihat
+                    Detail</a>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag1</span>
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag2</span>
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">#tag3</span>
+            </div>
+        </div>
+
 
         </div>
     </section>
