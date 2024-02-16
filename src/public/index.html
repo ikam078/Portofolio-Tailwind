@@ -120,27 +120,35 @@
 
     <!-- project -->
     <section id="project" class="container mx-auto py-20">
-        <h2 class="text-3xl font-bold mb-8 text-center">My Project</h2>
-        <div class="grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg p-8 shadow-lg cursor-pointer transition-shadow hover:shadow-gray-500">
-                <a href="https://ikam078.github.io/Honda-x-Bootstrap/">
-                    <h3 class="text-xl font-bold mb-4">Honda x Bootstrap</h3>
-                </a>
-                <p></p>
+        <h2 class="text-3xl font-bold mb-8 text-center">Project</h2>
+
+        <div class="p-2">
+            <!-- Elemen overlay untuk efek loading -->
+            <div id="loadingOverlay"
+                class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
+                <div class="text-white text-lg mb-4 animate-pulse">Go to Project</div>
+                <div class="flex space-x-4">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
+                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
+                    <div class="w-12 h-12 bg-blue-500 rounded-full animate-bounce"></div>
+                </div>
             </div>
-            <div class="bg-white rounded-lg p-8 shadow-lg  cursor-pointer transition-shadow hover:shadow-gray-500">
-                <a href=" https://ikam078.github.io/muslim-web/">
-                    <h3 class="text-xl font-bold mb-4">Muslim web </h3>
-                </a>
-                <p></p>
+
+            <div
+                class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
+                <div class="px-6 py-4">
+                    <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Astra Honda Motor</div>
+                    <p class="mb-4 text-gray-700 dark:text-gray-300 text-base">
+                        Created by Bootstrap
+                    </p>
+                    <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
+                    <a href=" https://ikam078.github.io/Honda-x-Bootstrap/"
+                        class="mt-4 px-2 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105"><i
+                            class="lni lni-eye"></i></a>
+                </div>
             </div>
-            <div class="bg-white rounded-lg p-8 shadow-lg  cursor-pointer transition-shadow hover:shadow-gray-500">
-                <a href="https://ikam078.github.io/pokemon.github.io/">
-                    <h3 class="text-xl font-bold mb-4">Pokemon card</h3>
-                </a>
-                <p></p>
-            </div>
-            
+        </div>
+
         </div>
     </section>
 
@@ -148,7 +156,7 @@
     <!-- data home -->
     <script>
         const textElement = document.getElementById('typing-text');
-        const texts = ['Ilham Athallah', 'Student', 'Software Engginer'];
+        const texts = ['Ilham Athallah', 'Student', 'Software Engineering'];
         let index = 0;
         let charIndex = 0;
 
@@ -174,6 +182,24 @@
         }
 
         type(); // Memulai proses pengetikan
+
+        // Menampilkan overlay saat pindah halaman
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a').forEach(function (elem) {
+                elem.addEventListener('click', function (event) {
+                    // Menampilkan overlay loading
+                    document.getElementById('loadingOverlay').classList.remove('hidden');
+
+                    // Menunda perpindahan halaman
+                    event.preventDefault();
+
+                    // Menunggu sebentar sebelum mengarahkan pengguna ke halaman baru
+                    setTimeout(function () {
+                        window.location.href = elem.getAttribute('href');
+                    }, 1000); // Mengatur waktu delay sesuai kebutuhan (dalam milidetik)
+                });
+            });
+        });
     </script>
 
 
