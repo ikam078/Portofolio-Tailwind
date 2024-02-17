@@ -109,13 +109,23 @@
         </div>
     </div>
 
-
     <!-- home -->
-    <section id="home" class="bg-gray-900 py-20 text-center">
-        <div class="container mx-auto px-4">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture"
-                class="rounded-full w-32 h-32 mx-auto mb-4">
-            <h1 class="text-center mt-2 text-2xl font-medium text-gray-300">I'm a <span id="typing-text"></span></h1>
+    <section class="container mx-auto py-8">
+        <div class="max-w-md bg-white shadow-md rounded-lg overflow-hidden mx-auto">
+            <div class="px-6 py-4">
+                <div class="flex flex-col items-center md:flex-row md:justify-center">
+                    <img class="h-20 w-20 rounded-full mr-4 border-4 border-blue-500 mb-4 md:mb-0"
+                        src="profile-picture.jpg" alt="Foto Profil">
+                    <div>
+                        <p class="text-2xl font-semibold text-gray-800">Ilham athallah</p>
+                        <p id="typing-text" class="text-sm font-medium text-gray-600">I'm a <span></span></p>
+                        <p class="text-sm font-medium text-gray-600">Lokasi Anda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 py-2">
+                <p class="text-gray-700 text-base">Deskripsi singkat tentang Anda dan pekerjaan Anda.</p>
+            </div>
         </div>
     </section>
 
@@ -133,26 +143,37 @@
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4zm8-10c1.634 0 3.142.493 4.406 1.336l2.137-2.137A11.954 11.954 0 0020 12h-4c0-3.309-1.336-6.309-3.496-8.464l-2.138 2.137C13.142 5.493 14.65 5 16 5zM5.294 6.293l2.137-2.137C8.493 3.142 8 4.65 8 6v4H4c0-1.35.493-2.642 1.294-3.707zM12 20c-1.634 0-3.142-.493-4.406-1.336l-2.137 2.137C10.858 22.507 11.934 23 13 23v-4c-1.35 0-2.642-.493-3.707-1.294l2.137-2.137C10.858 15.507 11.934 16 13 16h4c0 1.366-.507 2.658-1.34 3.707l-2.137 2.137C14.142 19.507 13.634 20 12 20zM18.707 17.707l-2.137 2.137A7.962 7.962 0 0016 20h4c0-4.418-3.582-8-8-8v4c1.35 0 2.642.493 3.707 1.294z">
                 </path>
             </svg>
-            <p class="mt-4 text-lg text-white font-semibold">Loading</p>
+            <p class="mt-4 text-lg text-white font-semibold">Loading...</p>
         </div>
 
-        <div class="max-w-md bg-white shadow-md rounded-lg overflow-hidden">
-            <img class="w-full h-56 object-cover" src="image/Screenshot 2023-09-09 093950.png" alt="Nama Proyek">
+        <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
             <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Nama Proyek</div>
-                <p class="text-gray-700 text-base">
+                <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Nama Proyek</div>
+                <p class="text-gray-700 dark:text-gray-300 text-base">
                     Deskripsi singkat tentang proyek Anda.
                 </p>
+                <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
+                <a href="halaman-detail.html"
+                    class="mt-2 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center text-sm">
+                    <span class="mr-1">Detail</span>
+                    <!-- Icon panah kanan -->
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
             </div>
             <div class="px-6 pt-4 pb-2">
                 <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#tag1</span>
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag1</span>
                 <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#tag2</span>
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag2</span>
                 <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#tag3</span>
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">#tag3</span>
             </div>
         </div>
+
 
 
         </div>
@@ -162,7 +183,7 @@
     <!-- data home -->
     <script>
         const textElement = document.getElementById('typing-text');
-        const texts = ['Ilham Athallah', 'Student', 'Software Engineering'];
+        const texts = ['Student', 'Software Engineering'];
         let index = 0;
         let charIndex = 0;
 
