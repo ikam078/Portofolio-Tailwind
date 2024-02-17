@@ -110,174 +110,122 @@
     </div>
 
     <!-- home -->
-
-    <body class="bg-gray-100">
-        <<section class="container mx-auto py-8">
-            <div class="max-w-md bg-white shadow-md rounded-lg overflow-hidden mx-auto">
-                <div class="p-6">
-                    <div class="flex items-center justify-center">
-                        <img id="profileImg" class="h-24 w-24 rounded-full object-cover" src="profile-picture1.jpg"
-                            alt="Foto Profil">
-                    </div>
-                    <div class="text-center mt-4">
-                        <h1 class="text-3xl font-semibold text-blue-700">Nama Anda</h1>
-                        <p class="text-lg text-gray-600">Jurusan Anda</p>
+    <section class="container mx-auto py-8">
+        <div class="max-w-xl bg-gray-50 shadow-lg rounded-lg overflow-hidden mx-auto">
+            <div class="px-6 py-4">
+                <div class="flex flex-col items-center md:flex-row md:justify-center lg:justify-center">
+                    <img class="w-28 md:w-32 rounded-full mr-4 border-4 border-blue-500 mb-4 md:mb-0"
+                        src="image/photoku.jpg" alt="Foto Profil">
+                    <div>
+                        <p class="text-2xl font-semibold text-gray-800">Ilham athallah</p>
+                        <p class="text-sm font-medium text-gray-600">I'm a <span id="typing-text"></span></p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- project -->
+    <section id="project" class="container mx-auto py-20">
+        <h2 class="text-3xl font-bold mb-8 text-center">Project</h2>
 
-            <button id="change-picture">Change Picture</button>
-            <div class="bg-cover bg-center w-32 h-32" id="profile-picture"></div>
+        <!-- Elemen overlay untuk efek loading -->
+        <div id="loadingOverlay"
+            class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
+            <svg class="animate-spin h-20 w-20 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4zm8-10c1.634 0 3.142.493 4.406 1.336l2.137-2.137A11.954 11.954 0 0020 12h-4c0-3.309-1.336-6.309-3.496-8.464l-2.138 2.137C13.142 5.493 14.65 5 16 5zM5.294 6.293l2.137-2.137C8.493 3.142 8 4.65 8 6v4H4c0-1.35.493-2.642 1.294-3.707zM12 20c-1.634 0-3.142-.493-4.406-1.336l-2.137 2.137C10.858 22.507 11.934 23 13 23v-4c-1.35 0-2.642-.493-3.707-1.294l2.137-2.137C10.858 15.507 11.934 16 13 16h4c0 1.366-.507 2.658-1.34 3.707l-2.137 2.137C14.142 19.507 13.634 20 12 20zM18.707 17.707l-2.137 2.137A7.962 7.962 0 0016 20h4c0-4.418-3.582-8-8-8v4c1.35 0 2.642.493 3.707 1.294z">
+                </path>
+            </svg>
+            <p class="mt-4 text-lg text-white font-semibold">Loading...</p>
+        </div>
 
-            </section>
-
-
-            <!-- project -->
-            <section id="project" class="container mx-auto py-20">
-                <h2 class="text-3xl font-bold mb-8 text-center">Project</h2>
-
-                <!-- Elemen overlay untuk efek loading -->
-                <div id="loadingOverlay"
-                    class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center z-50 hidden">
-                    <svg class="animate-spin h-20 w-20 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                        </circle>
-                        <path class="opacity-75" fill="currentColor"
-                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4zm8-10c1.634 0 3.142.493 4.406 1.336l2.137-2.137A11.954 11.954 0 0020 12h-4c0-3.309-1.336-6.309-3.496-8.464l-2.138 2.137C13.142 5.493 14.65 5 16 5zM5.294 6.293l2.137-2.137C8.493 3.142 8 4.65 8 6v4H4c0-1.35.493-2.642 1.294-3.707zM12 20c-1.634 0-3.142-.493-4.406-1.336l-2.137 2.137C10.858 22.507 11.934 23 13 23v-4c-1.35 0-2.642-.493-3.707-1.294l2.137-2.137C10.858 15.507 11.934 16 13 16h4c0 1.366-.507 2.658-1.34 3.707l-2.137 2.137C14.142 19.507 13.634 20 12 20zM18.707 17.707l-2.137 2.137A7.962 7.962 0 0016 20h4c0-4.418-3.582-8-8-8v4c1.35 0 2.642.493 3.707 1.294z">
-                        </path>
+        <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
+            <div class="px-6 py-4">
+                <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Nama Proyek</div>
+                <p class="text-gray-700 dark:text-gray-300 text-base">
+                    Deskripsi singkat tentang proyek Anda.
+                </p>
+                <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
+                <a href="halaman-detail.html"
+                    class="mt-2 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center text-sm">
+                    <span class="mr-1">Detail</span>
+                    <!-- Icon panah kanan -->
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
-                    <p class="mt-4 text-lg text-white font-semibold">Loading...</p>
-                </div>
-
-                <div
-                    class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="px-6 py-4">
-                        <div class="font-semibold text-xl mb-2 text-gray-800 dark:text-white">Nama Proyek</div>
-                        <p class="text-gray-700 dark:text-gray-300 text-base">
-                            Deskripsi singkat tentang proyek Anda.
-                        </p>
-                        <!-- Menggunakan elemen <a> untuk mengarahkan ke halaman lain -->
-                        <a href="halaman-detail.html"
-                            class="mt-2 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center text-sm">
-                            <span class="mr-1">Detail</span>
-                            <!-- Icon panah kanan -->
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag1</span>
-                        <span
-                            class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag2</span>
-                        <span
-                            class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">#tag3</span>
-                    </div>
-                </div>
+                </a>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag1</span>
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300 mr-2">#tag2</span>
+                <span
+                    class="inline-block bg-blue-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 dark:text-blue-300">#tag3</span>
+            </div>
+        </div>
 
 
 
-                </div>
-            </section>
+        </div>
+    </section>
 
 
-            <!-- data home -->
-            <script>
-                // ========== typing test
-                const textElement = document.getElementById('typing-text');
-                const texts = ['Student', 'Software Engineering'];
-                let index = 0;
-                let charIndex = 0;
+    <!-- data home -->
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const texts = ['Student', 'Software Engineering'];
+        let index = 0;
+        let charIndex = 0;
 
-                function type() {
-                    if (charIndex < texts[index].length) {
-                        textElement.textContent += texts[index].charAt(charIndex);
-                        charIndex++;
-                        setTimeout(type, 90); // Ubah kecepatan pengetikan disini (dalam milidetik)
-                    } else {
-                        setTimeout(erase, 900); // Waktu jeda sebelum menghapus teks
-                    }
-                }
+        function type() {
+            if (charIndex < texts[index].length) {
+                textElement.textContent += texts[index].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 90); // Ubah kecepatan pengetikan disini (dalam milidetik)
+            } else {
+                setTimeout(erase, 900); // Waktu jeda sebelum menghapus teks
+            }
+        }
 
-                function erase() {
-                    if (charIndex >= 0) {
-                        textElement.textContent = texts[index].substring(0, charIndex);
-                        charIndex--;
-                        setTimeout(erase, 50); // Kecepatan penghapusan teks
-                    } else {
-                        index = (index + 1) % texts.length;
-                        setTimeout(type, 500); // Waktu jeda sebelum mulai mengetik teks berikutnya
-                    }
-                }
+        function erase() {
+            if (charIndex >= 0) {
+                textElement.textContent = texts[index].substring(0, charIndex);
+                charIndex--;
+                setTimeout(erase, 50); // Kecepatan penghapusan teks
+            } else {
+                index = (index + 1) % texts.length;
+                setTimeout(type, 500); // Waktu jeda sebelum mulai mengetik teks berikutnya
+            }
+        }
 
-                type(); // Memulai proses pengetikan
+        type(); // Memulai proses pengetikan
 
-                // ========== Menampilkan overlay saat pindah halaman
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.querySelectorAll('a').forEach(function (elem) {
-                        elem.addEventListener('click', function (event) {
-                            // Menampilkan overlay loading
-                            document.getElementById('loadingOverlay').classList.remove(
-                                'hidden');
+        // Menampilkan overlay saat pindah halaman
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a').forEach(function (elem) {
+                elem.addEventListener('click', function (event) {
+                    // Menampilkan overlay loading
+                    document.getElementById('loadingOverlay').classList.remove('hidden');
 
-                            // Menunda perpindahan halaman
-                            event.preventDefault();
+                    // Menunda perpindahan halaman
+                    event.preventDefault();
 
-                            // Menunggu sebentar sebelum mengarahkan pengguna ke halaman baru
-                            setTimeout(function () {
-                                window.location.href = elem.getAttribute('href');
-                            }, 1000); // Mengatur waktu delay sesuai kebutuhan (dalam milidetik)
-                        });
-                    });
+                    // Menunggu sebentar sebelum mengarahkan pengguna ke halaman baru
+                    setTimeout(function () {
+                        window.location.href = elem.getAttribute('href');
+                    }, 1000); // Mengatur waktu delay sesuai kebutuhan (dalam milidetik)
                 });
+            });
+        });
+    </script>
 
 
-                // Daftar gambar profil yang akan digunakan
-                const profileImages = ['profile-picture1.jpg', 'profile-picture2.jpg', 'profile-picture3.jpg'];
-                let currentIndex = 0;
-
-                // Fungsi untuk mengubah gambar profil secara otomatis
-                function changeProfileAutomatically() {
-                    const profileImg = document.getElementById('profileImg');
-                    profileImg.src = profileImages[currentIndex];
-                    currentIndex = (currentIndex + 1) % profileImages.length;
-                }
-
-                // Set interval untuk mengubah gambar setiap 5 detik
-                setInterval(changeProfileAutomatically, 5000);
-
-                // Fungsi untuk membuat gambar berkedip
-                function blinkImage() {
-                    const profileImg = document.getElementById('profileImg');
-                    profileImg.style.visibility = (profileImg.style.visibility === 'hidden') ? 'visible' : 'hidden';
-                }
-
-                // Set interval untuk membuat gambar berkedip setiap 500ms
-                setInterval(blinkImage, 500);
-
-
-                const changePicture = document.getElementById("change-picture");
-                const profilePicture = document.getElementById("profile-picture");
-
-                const images = [
-                    "image/photoku.jpg", // first image
-                    "https://via.placeholder.com/150/00FF00/808080", // second image
-                    "https://via.placeholder.com/150/FF0000/808080" // third image
-                ]
-
-                let currentImage = 0;
-
-                changePicture.addEventListener("click", () => {
-                    currentImage = (currentImage + 1) % images.length; // loop through the images
-                    profilePicture.style.backgroundImage = `url(${images[currentImage]})`;
-                });
-            </script>
-
-    </body>
+</body>
 
 </html>

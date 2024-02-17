@@ -1302,6 +1302,11 @@ video {
     margin-right: 8rem;
   }
 
+  .md\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1336,6 +1341,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 
   .md\:justify-center {
