@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/public/style.css">
     <link rel="shortcut icon" href="/src/public/image/folder.svg">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <!-- navbar -->
     <div
         class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2  bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
-        <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
+        <div class="grid h-full max-w-lg grid-cols-6 mx-auto">
 
             <!-- home -->
             <button onclick="window.location.href='#home'" type="button"
@@ -83,7 +84,7 @@
 
             <!-- profile -->
             <button onclick="window.location.href='#profile'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                 <svg class="w-5 h-5 mb-1 fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path
@@ -97,17 +98,38 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
+            <!-- settings -->
+            <button onclick="window.location.href='#settings'" type="button"
+                class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg class="fill-gray-400 hover:fill-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z">
+                    </path>
+                    <path
+                        d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z">
+                    </path>
+                </svg>
+                <span class="sr-only">Profile</span>
+            </button>
+            <div id="tooltip-profile" role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Profile
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
         </div>
     </div>
 
     <!-- home -->
-    <section id="home" class="container shadow-gray-200 py-3 lg:mx-auto">
-        <div class="bg-gray-50 shadow-lg rounded-lg overflow-hidden md:mx-auto lg:py-8 ">
+    <section id="home" class="container mx-auto py-8">
+        <div class="max-w-xl bg-gray-50 shadow-xl rounded-lg overflow-hidden md:mx-auto">
             <div class="px-6 py-4">
-                <div class="flex flex-col items-center md:flex-row lg:justify-center">
-                    <img class="w-28 md:w-48 rounded-full mr-4 border-4 border-blue-500 mb-4 md:mb-0"
-                        src="image/photoku.jpg" alt="Foto Profil">
-                    <div class="">
+                <div class="flex flex-col items-center md:flex-row md:justify-center lg:justify-center">
+                    <img class="w-32 rounded-full mr-4 border-4 border-blue-500 mb-4 md:mb-0" src="image/photoku.jpg"
+                        alt="Foto Profil">
+                    <div>
                         <p class="text-2xl font-semibold text-gray-800">Ilham athallah</p>
                         <p class="text-sm font-medium text-gray-600">I'm a <span id="typing-text"></span></p>
                     </div>
@@ -118,8 +140,33 @@
 
     <!-- project -->
     <section id="project" class="container mx-auto py-20">
-        <!-- Your project section content goes here -->
-        <div ></div>
+        <div class="flex flex-col-2 mx-auto">
+            <!-- Your project section content goes here -->
+            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div
+                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-200 to-blue-400">
+                    <div class="p-1 justify-center items-center"><img class="rounded-lg"
+                            src="image/Screenshot 2023-09-09 093950.png" alt=""></div>
+                </div>
+                <div class="p-6">
+                    <h5
+                        class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                        Tailwind card
+                    </h5>
+                    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button data-ripple-light="true" type="button"
+                        class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        Read More
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
     </section>
 
     <!-- certificate -->
@@ -136,6 +183,9 @@
     <section id="profile" class="container mx-auto py-20">
         <!-- Your profile section content goes here -->
     </section>
+
+    <!-- settings -->
+    <section id="settings" class="container mx-auto py-20"></section>
 
     <!-- Your scripts -->
     <!-- data home -->
