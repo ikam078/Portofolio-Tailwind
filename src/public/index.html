@@ -141,29 +141,50 @@
     <!-- project -->
     <section id="project" class="container mx-auto py-20">
         <div class="flex flex-col-2 mx-auto">
+
+            <!-- loading -->
+
             <!-- Your project section content goes here -->
-            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div
-                    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-200 to-blue-400">
-                    <div class="p-1 justify-center items-center"><img class="rounded-lg"
-                            src="image/Screenshot 2023-09-09 093950.png" alt=""></div>
+            <div
+                class="max-w-sm rounded overflow-hidden shadow-lg bg-white transform transition duration-500 hover:scale-105">
+                <div class="relative overflow-hidden">
+                    <img class="w-full h-64 object-cover transform transition duration-500 hover:scale-110"
+                        src="https://source.unsplash.com/random" alt="Project Image">
+                    <div class="absolute inset-0 bg-black opacity-50 transition duration-500 hover:opacity-0"></div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 transition duration-500 hover:opacity-100">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">View
+                            Details</button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Add to
+                            Favorites</button>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h5
-                        class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        Tailwind card
-                    </h5>
-                    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Project Title</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div class="p-6 pt-0">
-                    <button data-ripple-light="true" type="button"
-                        class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                        Read More
-                    </button>
+                <div class="px-6 py-4">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#webdesign</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#uiux</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#frontend</span>
+                </div>
+                <div class="px-6 py-4 flex items-center">
+                    <img class="w-10 h-10 rounded-full mr-4" src="https://source.unsplash.com/random" alt="Avatar">
+                    <div>
+                        <p class="text-gray-900 font-semibold">John Doe</p>
+                        <p class="text-gray-700 text-sm">Designer</p>
+                    </div>
                 </div>
             </div>
+
+
 
 
         </div>
