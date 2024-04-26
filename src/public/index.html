@@ -1,217 +1,337 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
-    <link rel="stylesheet" href="/src/public/style.css">
-    <link rel="shortcut icon" href="/src/public/image/folder.svg">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <title>Ilham Athallah - Portfolio</title>
+    <link rel="icon" href="/src/public/image/icons8-briefcase-100.png">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        body {
+                font-family: 'Poppins', sans-serif;
+            }
 
+            .hamburger-line {
+                @apply w-[18px] h-[2px] my-1 block bg-dark;
+            }
+
+            .hamburger-active > span:nth-child(1) {
+                @apply rotate-45;
+            }
+
+            .hamburger-active > span:nth-child(2) {
+                @apply scale-0;
+            }
+
+            .hamburger-active > span:nth-child(3) {
+                @apply -rotate-45;
+            }
+
+        </style>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Text Color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: '16px',
+                },
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0f172a',
+                        secondary: '#64748b',
+                    },
+                    screens: {
+                        '2xl': '1230px',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="bg-transparent fixed bg-white drop-shadow-sm top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6 tracking-wide">Ilham Athallah</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
 
-    <!-- navbar sm -->
-    <div
-        class="fixed md:hidden z-50 w-full h-16 max-w-lg -translate-x-1/2  bg-white border border-gray-200 rounded-2xl bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
-        <div class="grid h-full max-w-lg grid-cols-6 mx-auto">
-
-            <!-- home -->
-            <button onclick="window.location.href='#home'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="w-5 h-5 mb-1 fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path
-                        d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-                </svg>
-                <span class="sr-only">Home</span>
-            </button>
-
-            <!-- project -->
-            <button onclick="window.location.href='#project'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM9 9H5V5h4v4zm5 2h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm1-6h4v4h-4V5zM3 20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6zm2-5h4v4H5v-4zm8 5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6zm2-5h4v4h-4v-4z" />
-                </svg>
-                <span class="sr-only">Project</span>
-            </button>
-
-            <!-- certificate -->
-            <button onclick="window.location.href='#certificate'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="hover:fill-blue-600" fill="#9CA3AF" width="25" height="25" version="1.1"
-                    id="lni_lni-certificate" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64"
-                    style="enable-background:new 0 0 64 64;" xml:space="preserve">
-                    <path
-                        d="M56,34.8h-3.9V9.6c0-4.2-3.3-7.6-7.3-7.8l-31.6,0C6.9,1.7,1.8,7,1.8,13.5v4.3c0,2,1.7,3.7,3.7,3.7h6.5v26.7
-                    c0,3.5,2.9,6.4,6.5,6.4h3.7v5.1c0,1,0.5,1.8,1.4,2.3c0.4,0.2,0.8,0.3,1.2,0.3c0.5,0,1-0.1,1.4-0.4l4.6-3l4.5,2.9l0.2,0.1
-                    c0.9,0.4,1.8,0.4,2.6-0.1c0.8-0.5,1.2-1.3,1.2-2.2v-5H56c3.4,0,6.3-2.8,6.3-6.3v-7.3C62.3,37.6,59.4,34.8,56,34.8z M6.3,13.5
-                    c0-4,3.1-7.3,6.9-7.3h22.7c-0.6,1.2-1,2.6-1,4.1V17H6.3V13.5z M30.7,44.5c-3.7,0-6.6-2.9-6.6-6.5c0-3.6,3-6.5,6.6-6.5
-                    s6.6,2.9,6.6,6.5C37.3,41.6,34.4,44.5,30.7,44.5z M32.4,54.6c-1-0.7-2.3-0.7-3.4,0l-2.4,1.6v-8c1.3,0.5,2.7,0.8,4.1,0.8
-                    c1.5,0,2.9-0.3,4.1-0.8v8L32.4,54.6z M39.3,50.1v-5.2c1.6-1.9,2.5-4.3,2.5-6.9c0-6.1-5-11-11.1-11c-6.1,0-11.1,4.9-11.1,11
-                    c0,2.6,0.9,5.1,2.5,7v5.1h-3.7c-1.1,0-2-0.8-2-1.9V21.5h19.2c2,0,3.7-1.7,3.7-3.7v-7.4c0-2.2,1.5-3.9,3.5-4.1h1.5
-                    c1.8,0,3.2,1.5,3.2,3.3v40.5H39.3z M57.8,48.3c0,1-0.8,1.8-1.8,1.8h-3.9V39.3H56c1,0,1.8,0.8,1.8,1.8V48.3z" />
-                </svg>
-                <span class="sr-only">Certificate</span>
-            </button>
-            <div id="tooltip-certificate" role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                Certificate
-                <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- school -->
-            <button onclick="window.location.href='#school'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="fill-gray-400 hover:fill-blue-600 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                    <path d="M21 10h-2V4h1V2H4v2h1v6H3a1 1 0 0 0-1 1v9h20v-9a1 1 0 0 0-1-1zm-7 8v-4h-4v4H7V4h10v14h-3z">
-                    </path>
-                    <path d="M9 6h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z"></path>
-                </svg>
-                <span class="sr-only">School</span>
-            </button>
-            <div id="tooltip-school" role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                School
-                <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- profile -->
-            <button onclick="window.location.href='#profile'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <svg class="w-5 h-5 mb-1 fill-gray-400 text-gray-500 dark:text-gray-400 hover:fill-blue-600 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path
-                        d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-                </svg>
-                <span class="sr-only">Profile</span>
-            </button>
-            <div id="tooltip-profile" role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                Profile
-                <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- settings -->
-            <button onclick="window.location.href='#settings'" type="button"
-                class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-                <?xml version="1.0" encoding="utf-8"?>
-                <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg class="fill-gray-400 hover:fill-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24">
-                    <path
-                        d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z">
-                    </path>
-                    <path
-                        d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z">
-                    </path>
-                </svg>
-                <span class="sr-only">Profile</span>
-            </button>
-            <div id="tooltip-profile" role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                Profile
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                    <!-- Navbar -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-sm rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#home">Home</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#about">About Me</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#kontak">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /Navbar -->
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+    <!-- /Header -->
 
-    <!-- home -->
-    <section id="home" class="container mx-auto">
-        <div class="max-w-xl h-full lg:max-w-none bg-gray-50 shadow-xl rounded-lg overflow-hidden md:mx-auto">
-            <div class="py-4 lg:mx-4">
-                <div class="flex flex-col items-center md:flex-row md:justify-center lg:justify-stretch">
-                    <img class="w-32 lg:w-48 rounded-full mr-4 border-4 border-blue-500 mb-4 md:mb-0" src="image/photoku.jpg"
-                        alt="Foto Profil">
-                    <div>
-                        <p class="text-2xl font-semibold text-gray-800">Ilham athallah</p>
-                        <p class="text-sm font-medium text-gray-600">I'm a <span id="typing-text"></span></p>
+    <!-- Home -->
+    <section id="home" class="pt-36">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <h1 class="text-base font-medium text-primary">Halo evryone 👋, It's me <span
+                            class="block font-bold text-dark text-3xl mt-1 lg:text-4xl">Ilham Athallah</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 mt-3">Junior Web Developer</h2>
+                    <p class="font-normal text-secondary mb-10 leading-relaxed">A junior web developer. I
+                        specialize in responsive web design, and visual development.</p>
+                    <a href="#kontak"
+                        class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">contact
+                        me</a>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="mt-10 lg:mt-8 lg:right-0">
+                        <img src="dist/img/profile.png" alt="photo profile" class="max-w-full mx-auto w-96">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- /Home -->
 
-    <!-- project -->
-    <section id="project" class="container mx-auto py-20">
-
-        <!-- loading -->
+    <!-- About -->
+    <section id="about" class="pt-36 pb-32">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-5 lg:w-1/2">
+                    <h4 class="text-base font-medium text-primary mb-2">About me</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Junior Web Developer</h2>
+                    <p class="font-normal text-secondary mb-5 leading-relaxed max-w-xl">I attended smk IDN boarding
+                        school with a major in informatics engineering, with a suitable background as a web developer..
+                    </p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="font-bold text-dark text-xl lg:text-2xl mb-5 lg:pt-8">let's be friends</h3>
+                    <p class="font-normal text-secondary mb-4 leading-relaxed">Find me on various social media, don't
+                        forget to follow and subscribe to my Youtube channel.</p>
+                    <div class="flex items-center">
+                        <!-- Youtube -->
+                        <a href="" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-youtube fill-current text-2xl'></i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/ilham-athallah-741541284/" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/kak_athallah/" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                        </a>
+                        <!-- Github -->
+                        <a href="https://github.com/ikam078" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-github fill-current text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- /About -->
 
-    <!-- certificate -->
-    <section id="certificate" class="container mx-auto py-20">
-        <!-- Your certificate section content goes here -->
+    <!-- Portfolio -->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="text-base font-medium text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Project Terbaru</h2>
+                    <p class="font-normal text-secondary leading-relaxed">Here are some recent projects that
+                        I've been working on, including my own personal projects.</p>
+                </div>
+            </div>
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/1.jpg" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Hasil nyata dari desain satu
+                        halaman Lookscount</h3>
+                    <p class="font-normal text-secondary leading-relaxed">Saya menemukan desain ini di Figma Community
+                        dan mengubah desain UInya menjadi kode HTML. <a href=""
+                            class="text-primary underline" target="_blank">Live preview</a></p>
+                </div>
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="image/Cuplikan layar 2024-04-24 105710.png" class="w-full" alt="honda motors project">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Website tentang Astra Honda
+                        Motors </h3>
+                    <p class="font-normal text-secondary leading-relaxed">Web brand sederhana untuk honda menggunakan
+                        bootstrap<a href="https://ikam078.github.io/Honda-x-Bootstrap/" class="text-primary underline"
+                            target="_blank">Live preview</a></p>
+                </div>
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/3.jpg" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Konsep desain web Creative
+                        Digital Agency bernama Dodecia</h3>
+                    <p class="font-normal text-secondary leading-relaxed">Dodecia adalah nama dari contoh brand hasil
+                        eksplorasi saya untuk situs digital agency. <a
+                            href=""
+                            class="text-primary underline" target="_blank">Live preview</a></p>
+                </div>
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/4.jpg" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Daydaytravel situs web yang
+                        berfokus pada ulasan perjalanan dan kuliner</h3>
+                    <p class="font-normal text-secondary leading-relaxed">Desain web ini terinspirasi dari situs
+                        Gotravelly, yang terdiri dari empat halaman. <a href=""
+                            class="text-primary underline" target="_blank">Live preview</a></p>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- /Portfolio -->
 
-    <!-- school -->
-    <section id="school" class="container mx-auto py-20">
-        <!-- Your school section content goes here -->
+    <!-- Contact -->
+    <section id="kontak" class="pt-36 pb-32">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mb-16">
+                    <h4 class="text-base font-medium text-primary mb-2">Contact</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Contact Me</h2>
+                    <p class="font-normal text-secondary mb-10 leading-relaxed">For collaboration, inquiries or
+                        job offers, please fill out the message form below.</p>
+                </div>
+            </div>
+            <form action="https://formspree.io/f/xqkrwvdk" method="POST">
+                <div class="w-full lg:w-2/3">
+                    <!-- name -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="text" id="name" placeholder="Full-name" name="Full_name"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- email -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="email" id="email" placeholder="Email" name="Email"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- subject -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="text" id="subject" placeholder="subject" name="subject"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- message -->
+                    <div class="w-full px-4 mb-12">
+                        <textarea type="text" id="message" placeholder="message" name="Message"
+                            class="text-base border-b w-full text-dark pb-3 h-32 focus:outline-none focus:border-primary"></textarea>
+                    </div>
+                    <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg
+                        hover:opacity-90 transition duration-300 ease-in-out">Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
+    <!-- /Contact -->
 
-    <!-- profile -->
-    <section id="profile" class="container mx-auto py-20">
-        <!-- Your profile section content goes here -->
-    </section>
+    <!-- Footer -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <!-- <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                        <h2 class="font-bold text-4xl text-white mb-5">Ilham Athallah</h2>
+                        <h3 class="font-bold text-2xl mb-2">Contact me</h3>
+                        <p>ilham.athallah08@gmail.com</p>
+                        <p>Jl. Baret biru lll no.77</p>
+                        <p>Cijantung - Jakarta Timur</p>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Kategori tulisan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Programming</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Teknologi</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Gaya hidup</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Beranda</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Tentang saya</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            <div class="w-full pt-4">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- Youtube -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-youtube fill-current text-2xl'></i>
+                    </a>
+                    <!-- Linkedin -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                    </a>
+                    <!-- Github -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-github fill-current text-2xl'></i>
+                    </a>
+                </div>
+                <p class="text-slate-500 text-sm text-center">Dibuat dengan oleh <a href="#"
+                        class="text-primary font-medium">Ilham</a>, menggunakan <a href=""
+                        class="text-sky-500 font-medium">Tailwindcss</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
 
-    <!-- Your scripts -->
-
-    <!-- data home -->
-    <script>
-        const textElement = document.getElementById('typing-text');
-        const texts = ['Student', 'Software Engineering'];
-        let index = 0;
-        let charIndex = 0;
-
-        function type() {
-            if (charIndex < texts[index].length) {
-                textElement.textContent += texts[index].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, 90); // Ubah kecepatan pengetikan disini (dalam milidetik)
-            } else {
-                setTimeout(erase, 900); // Waktu jeda sebelum menghapus teks
-            }
-        }
-
-        function erase() {
-            if (charIndex >= 0) {
-                textElement.textContent = texts[index].substring(0, charIndex);
-                charIndex--;
-                setTimeout(erase, 50); // Kecepatan penghapusan teks
-            } else {
-                index = (index + 1) % texts.length;
-                setTimeout(type, 500); // Waktu jeda sebelum mulai mengetik teks berikutnya
-            }
-        }
-
-        type(); // Memulai proses pengetikan
-
-        // Menampilkan overlay saat pindah halaman
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('a').forEach(function (elem) {
-                elem.addEventListener('click', function (event) {
-                    // Menampilkan overlay loading
-                    document.getElementById('loadingOverlay').classList.remove('hidden');
-
-                    // Menunda perpindahan halaman
-                    event.preventDefault();
-
-                    // Menunggu sebentar sebelum mengarahkan pengguna ke halaman baru
-                    setTimeout(function () {
-                        window.location.href = elem.getAttribute('href');
-                    }, 1000); // Mengatur waktu delay sesuai kebutuhan (dalam milidetik)
-                });
-            });
-        });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="/src/public/app.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="/src/public/js/script.js"></script>
 </body>
 
 </html>
