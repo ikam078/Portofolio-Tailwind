@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+        <!-- link css -->
+    <link rel="stylesheet" href="/src/public/style.css">
+
     <style type="text/tailwindcss">
         body {
                 font-family: 'Poppins', sans-serif;
@@ -34,30 +37,12 @@
                 @apply -rotate-45;
             }
 
-        </style>
+    </style>
+        
+
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Text Color -->
-    <script>
-        tailwind.config = {
-            theme: {
-                container: {
-                    center: true,
-                    padding: '16px',
-                },
-                extend: {
-                    colors: {
-                        primary: '#2563EB',
-                        dark: '#0f172a',
-                        secondary: '#64748b',
-                    },
-                    screens: {
-                        '2xl': '1230px',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -361,7 +346,7 @@
                         <textarea type="text" id="message" placeholder="message" name="Message"
                             class="text-base border-b w-full text-dark pb-3 h-32 focus:outline-none focus:border-primary"></textarea>
                     </div>
-                    <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg
+                    <button type="submit" class="text-base font-semibold text-balck bg-primary py-3 px-8 rounded-full hover:shadow-lg
                         hover:opacity-90 transition duration-300 ease-in-out">Send Message
                     </button>
                 </div>
